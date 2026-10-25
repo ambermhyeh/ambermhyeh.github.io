@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--
+  ================================================================
+  版型 B：Modern（現代側邊欄風）
+  ----------------------------------------------------------------
+  ✏️ 修改方式：
+    1. 搜尋「✏️」就能找到所有需要你改的地方
+    2. 用 Cursor 的「全部取代」（Cmd + Shift + H）
+       把 YOUR-USERNAME 換成你的 GitHub 帳號
+    3. 顏色、字體在 style.css 最上方的 :root 區塊調整
+    4. 專案卡片的 Demo / Code 分頁切換寫在 script.js
+  ================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ✏️ 瀏覽器分頁上顯示的標題 -->
+  <title>Amber Yeh · Portfolio</title>
+  <!-- ✏️ 搜尋引擎、分享連結時顯示的簡介 -->
+  <meta name="description" content="Amber Yeh — aspiring MIS graduate student. Projects in Python, data processing and visualization.">
+
+  <!-- 字體：Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- 程式碼上色：highlight.js（深色主題） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+  <!-- 我們自己的樣式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ===================== 左側欄 Sidebar ===================== -->
+    <aside class="sidebar">
+      <!-- ✏️ 換成你的大頭照：把照片放到 assets/img/，再改 src 的檔名 -->
+      <img class="avatar" src="assets/img/avatar.svg" alt="Portrait of Amber Yeh">
+      <!-- ✏️ 名字與一句話介紹 -->
+      <h1 class="name">Amber Yeh</h1>
+      <p class="role">Aspiring MIS Graduate Student</p>
+      <p class="location">Taipei, Taiwan</p>
+
+      <nav>
+        <ul class="side-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#journey">Education &amp; Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-links">
+        <!-- ✏️ 換成你的 GitHub / LinkedIn / Email -->
+        <a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
+        <a href="mailto:your.email@example.com">Email</a>
+      </div>
+      <!-- ✏️ 履歷 PDF 放到 assets/files/resume.pdf -->
+      <a class="btn btn-primary btn-block" href="assets/files/resume.pdf" target="_blank">Download Résumé</a>
+    </aside>
+
+    <!-- ===================== 右側主要內容 ===================== -->
+    <main class="content">
+
+      <!-- ========== 1. 自我介紹 ========== -->
+      <section id="about" class="section">
+        <p class="eyebrow">Hello, I'm Amber 👋</p>
+        <!-- ✏️ 一句有記憶點的主標題 -->
+        <h2 class="headline">I turn messy data and business questions into <span class="hl">working software</span>.</h2>
+        <!-- ✏️ 2–4 句自我介紹 -->
+        <p class="lead">
+          Through stanCode's Python programming program, I built interactive
+          applications and data pipelines from scratch. I'm applying to
+          MS in Management Information Systems programs to combine data,
+          technology, and business strategy.
+        </p>
+
+        <!-- 重點數字卡片：✏️ 換成最能代表你的 3 個事實 -->
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-value">2</span>
+            <span class="stat-label">Python projects built end-to-end</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">120</span>
+            <span class="stat-label">years of public data visualized</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">Fall 2027</span>
+            <span class="stat-label">target MS in MIS / MSIS intake</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 2. 專案作品（重點區塊） ========== -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <!-- ---------- 專案 1：Breakout ---------- -->
+        <!-- 新增專案：複製整個 <article class="card project"> ... </article> -->
+        <article class="card project">
+          <header class="project-header">
+            <div>
+              <h3>Breakout Game with Power-ups</h3>
+              <p class="project-summary">An arcade game with an event-driven animation loop and a random power-up system.</p>
+            </div>
+            <!-- ✏️ 換成你的 GitHub 帳號 -->
+            <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io/tree/main/projects/breakout" target="_blank">Source ↗</a>
+          </header>
+
+          <ul class="tags">
+            <li>Python</li><li>OOP</li><li>Event-driven</li><li>campy</li>
+          </ul>
+
+          <!-- 分頁按鈕：data-tab 的值要和下面 panel 的 data-panel 一樣 -->
+          <div class="tabs" role="tablist">
+            <button class="tab is-active" data-tab="demo">▶ Demo</button>
+            <button class="tab" data-tab="code">&lt;/&gt; Code</button>
+            <button class="tab" data-tab="details">Details</button>
+          </div>
+
+          <!-- 分頁 1：影片 -->
+          <div class="panel is-active" data-panel="demo">
+            <!--
+              ✏️ 示範動畫：GIF 用 <img> 放就會自動循環播放，檔案放在 assets/img/
+              想改用 .mp4 影片（有播放鍵、可加聲音），把下面 <img> 換成：
+              <video controls preload="metadata" poster="assets/img/breakout-poster.svg">
+                <source src="assets/videos/breakout.mp4" type="video/mp4">
+              </video>
+            -->
+            <img src="assets/img/breakout.gif" alt="Breakout game demo: the paddle follows the mouse and the ball clears bricks" loading="lazy">
+          </div>
+
+          <!-- 分頁 2：程式碼 -->
+          <div class="panel" data-panel="code">
+            <p class="code-caption">breakoutgraphics_extension.py — collision detection &amp; power-ups</p>
+<pre><code class="language-python">def check_collisions(self):
+    # Check the four corners of the ball
+    vertex_1 = self._window.get_object_at(self._ball.x, self._ball.y)
+    vertex_2 = self._window.get_object_at(self._ball.x + BALL_RADIUS * 2, self._ball.y)
+    vertex_3 = self._window.get_object_at(self._ball.x, self._ball.y + BALL_RADIUS * 2)
+    vertex_4 = self._window.get_object_at(self._ball.x + BALL_RADIUS * 2,
+                                          self._ball.y + BALL_RADIUS * 2)
+    for vertex in (vertex_1, vertex_2, vertex_3, vertex_4):
+        if vertex not in (None, self._board, self._item):
+            if vertex is self._paddle:
+                if self.__dy &gt; 0:  # Bounce only when the ball is falling
+                    self.__dy = self.__dy * -1
+            else:
+                self.__dy = self.__dy * -1
+                self._window.remove(vertex)
+                self.update_score()
+                self.random_item()
+            break
+
+def random_item(self):
+    if self._item is not None:
+        return
+    chance = random.random()
+    if chance &lt; 0.15:
+        self.create_item(WIN_COLOR, 2)      # bonus: paddle x2
+    elif chance &lt; 0.3:
+        self.create_item(LOSE_COLOR, 0.5)   # penalty: paddle x0.5</code></pre>
+          </div>
+
+          <!-- 分頁 3：說明 -->
+          <div class="panel" data-panel="details">
+            <!-- ✏️ 用「問題 → 做法 → 收穫」的結構描述 -->
+            <div class="details-grid">
+              <div>
+                <h4>Challenge</h4>
+                <p>Build a complete game loop: mouse-controlled paddle, bouncing ball,
+                  100 bricks, three lives, and win / lose screens.</p>
+              </div>
+              <div>
+                <h4>Approach</h4>
+                <p>Separated game logic from a <code>BreakoutGraphics</code> class and
+                  exposed state through properties and setters. Collisions are
+                  detected by checking the ball's four corners.</p>
+              </div>
+              <div>
+                <h4>Extension</h4>
+                <p>Random power-ups: 15% bonus (paddle ×2), 15% penalty (paddle ×0.5),
+                  with the width bounded between 5% and 80% of the window.</p>
+              </div>
+              <div>
+                <h4>What I learned</h4>
+                <p>Encapsulation, event-driven programming, and designing rules
+                  that keep a game fair and fun.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------- 專案 2：Baby Names ---------- -->
+        <article class="card project">
+          <header class="project-header">
+            <div>
+              <h3>Baby Names Popularity Explorer</h3>
+              <p class="project-summary">An interactive tool that visualizes 120 years of U.S. baby name rankings.</p>
+            </div>
+            <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io/tree/main/projects/babynames" target="_blank">Source ↗</a>
+          </header>
+
+          <ul class="tags">
+            <li>Python</li><li>Data Processing</li><li>Data Visualization</li><li>Tkinter</li>
+          </ul>
+
+          <div class="tabs" role="tablist">
+            <button class="tab is-active" data-tab="demo">▶ Demo</button>
+            <button class="tab" data-tab="code">&lt;/&gt; Code</button>
+            <button class="tab" data-tab="details">Details</button>
+          </div>
+
+          <div class="panel is-active" data-panel="demo">
+            <!-- ✏️ 示範動畫放在 assets/img/babynames.gif（改用 mp4 的寫法見專案 1 的註解） -->
+            <img src="assets/img/babynames.gif" alt="Baby Names demo: searching names and plotting their rank from 1900 to 2020" loading="lazy">
+          </div>
+
+          <div class="panel" data-panel="code">
+            <p class="code-caption">babynames.py — building the data structure &amp; search</p>
+<pre><code class="language-python">def add_data_for_name(name_data, year, rank, name):
+    if name not in name_data:
+        name_data[name] = {year: rank}
+    elif year not in name_data[name]:
+        name_data[name][year] = rank
+    else:
+        # Same name in both lists: keep the better (smaller) rank
+        pre_rank = name_data[name][year]
+        name_data[name][year] = str(min(int(pre_rank), int(rank)))
+
+
+def search_names(name_data, target):
+    matching_names = []
+    t = target.lower()
+    for name in name_data:
+        if t in name.lower():
+            matching_names.append(name)
+    return matching_names</code></pre>
+          </div>
+
+          <div class="panel" data-panel="details">
+            <div class="details-grid">
+              <div>
+                <h4>Challenge</h4>
+                <p>Turn 13 raw text files (1900–2020) into an app where anyone can
+                  search a name and see its popularity trend.</p>
+              </div>
+              <div>
+                <h4>Data pipeline</h4>
+                <p>Parsed each file into a nested dictionary
+                  <code>{name: {year: rank}}</code>, keeping the best rank when a name
+                  appears in both the male and female lists.</p>
+              </div>
+              <div>
+                <h4>Visualization</h4>
+                <p>Mapped years and ranks to canvas coordinates, drew trend lines in
+                  rotating colors, and marked missing data with “*”.</p>
+              </div>
+              <div>
+                <h4>What I learned</h4>
+                <p>Cleaning real-world data, choosing the right data structure, and
+                  presenting data so people can read it at a glance.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ========== 3. 學歷與經歷（時間軸） ========== -->
+      <section id="journey" class="section">
+        <h2 class="section-title">Education &amp; Experience</h2>
+
+        <!-- 一個 <li> 是一筆，要新增就整段複製；越新的放越上面 -->
+        <ol class="timeline">
+          <li>
+            <!-- ✏️ 期間 / 職稱 / 公司 / 描述 -->
+            <span class="tl-date">2024 – Present</span>
+            <h3>Job Title · Company</h3>
+            <p>Analyzed … to improve … by xx%. Built … used by xx people.</p>
+          </li>
+          <li>
+            <span class="tl-date">2025 – 2026</span>
+            <h3>stanCode — Python Programming Program</h3>
+            <p>SC101 Intensive Track: OOP, data structures, file I/O, GUI and data visualization in Python.</p>
+          </li>
+          <li>
+            <span class="tl-date">2020 – 2024</span>
+            <h3>B.B.A. in Your Major · Your University</h3>
+            <p>GPA 3.xx / 4.00 · Relevant coursework: Statistics, Information Management, Database Systems.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ========== 4. 技能 ========== -->
+      <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills">
+          <div class="card skill-group">
+            <h3>Programming</h3>
+            <ul class="tags"><li>Python</li><li>HTML / CSS</li><li>Git</li></ul>
+          </div>
+          <div class="card skill-group">
+            <h3>Data</h3>
+            <ul class="tags"><li>Data Cleaning</li><li>Visualization</li><li>Excel</li></ul>
+          </div>
+          <div class="card skill-group">
+            <h3>Tools</h3>
+            <ul class="tags"><li>Cursor</li><li>GitHub</li><li>Notion</li></ul>
+          </div>
+          <div class="card skill-group">
+            <h3>Languages</h3>
+            <ul class="tags"><li>Mandarin (Native)</li><li>English (TOEFL xxx)</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 5. 聯絡方式 ========== -->
+      <section id="contact" class="section">
+        <div class="card contact-card">
+          <h2>Let's connect</h2>
+          <!-- ✏️ 申請目標與 Email -->
+          <p>I'm applying to MIS / MSIS programs for Fall 2027 and happy to talk about my work.</p>
+          <a class="btn btn-primary" href="mailto:your.email@example.com">your.email@example.com</a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <!-- ✏️ 年份與名字 -->
+        © 2026 Amber Yeh · Built with HTML, CSS &amp; JavaScript, hosted on GitHub Pages
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="script.js"></script>
+</body>
+</html>

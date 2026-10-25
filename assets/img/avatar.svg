@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#eef2ff"/>
+  <circle cx="150" cy="118" r="52" fill="#a5b4fc"/>
+  <path d="M50 300c8-62 50-96 100-96s92 34 100 96z" fill="#a5b4fc"/>
+  <text x="150" y="132" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#3730a3">AY</text>
+</svg>
